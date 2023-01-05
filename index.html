@@ -42,7 +42,7 @@
 <main>
 <section class="hero">
 <H1 class="hero-title">Effective Solutions for Your Business</H1>
-<button class="button-primary">Order Service</button>
+<button class="button-primary"  data-modal-open>Order Service</button>
 </section>
     </header>
     
@@ -356,7 +356,18 @@
         </ul>   
     </div>
 </div>
+<!-- модальное окно -->
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="action" data-modal-close>
+            <svg class="backdrop-icon" width="8px" height="8px">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
 </footer>
-  
+<script src="./js/modal.js"></script>
 </body>
 </html>

@@ -56,6 +56,15 @@ h1, h2, h3, ul, li, p{
     margin-right: 77px;
  
 }
+.link-studio> .link::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+}
 
 .primary {
     color:var(--accent-color);
@@ -486,6 +495,57 @@ margin-bottom: 72px;
 .footer-link:focus {
     background-color: #31D0AA;
 }
+/* модальное окно */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+}
+.modal{ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: end;
+    min-width: 408px;
+    min-height: 576px;
+    padding:  15px;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    box-shadow: 0px, 2px rgba(0, 0, 0, 0.2), 0px, 1px rgba(0, 0, 0, 0.12), 0px, 1px rgba(0, 0, 0, 0.14);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.action {
+    margin: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+.backdrop-icon {
+    fill: #000000;
+}
+.action:hover, 
+.action:focus{
+    background-color: #404BBF;
+  
+}
+.action:hover .backdrop-icon,
+.action:focus .backdrop-icon{
+    fill: #FFFFFF;
+}
+
+
 /* PORTFOLIO */
 .portfolio {
     padding-top: 96px;
