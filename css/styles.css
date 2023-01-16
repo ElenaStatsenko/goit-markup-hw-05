@@ -33,7 +33,7 @@ h1, h2, h3, ul, li, p{
      background-color: var(--secondary-bg-color); 
     padding-top: 24px;
     padding-bottom: 24px;
-    border-bottom:  var(--secondary-bg-color:);
+    border-bottom:  var(--secondary-bg-color);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);;  
  }
  .page-header > .container {
@@ -94,6 +94,7 @@ h1, h2, h3, ul, li, p{
     margin-right:40px;
 } */
 .site-nav .link { 
+    position: relative;
     display: block;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -102,7 +103,23 @@ h1, h2, h3, ul, li, p{
     letter-spacing: 2%;
 
     color: var(--title-text-color);
+    
 
+}
+.site-nav .link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    display: block;
+    width: 66px;
+    height: 4px;
+    border: 2px;
+    background-color: #404BBF;
+    opacity: 0;
+}
+.site-nav .link:hover::after{
+    opacity: 1;
 }
 .site-nav .link:hover,
 .site-nav .link:focus { 
@@ -131,14 +148,15 @@ h1, h2, h3, ul, li, p{
 }
 .link {
     text-decoration: none;
+}
+    
+.site-nav> .item{
     position: relative;
 }
-.link::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    content: '';
+.item> a::after {
     display: block;
+    position: absolute;
+    content: '';
     width: 66px;
     height: 4px;
     border-radius: 2px;
