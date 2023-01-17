@@ -625,6 +625,11 @@ margin-bottom: 72px;
     text-align: center;
 }
 /* карточки  */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 .clients-cards {
     display: flex;
     flex-wrap: wrap;
@@ -661,7 +666,7 @@ margin-bottom: 72px;
 .flex-card {
     width: 360px;
     height: 420px;
-    border: 0.5px solid #F4F4FD;
+    border: 1px solid #E7E9FC;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 .flex-card:not(:nth-child(3n))
