@@ -94,7 +94,8 @@ h1, h2, h3, ul, li, p{
     site-nav .item + .item {
     margin-right:40px;
 } */
-.site-nav .link { 
+/* .site-nav .link {  */
+    .link{
     position: relative;
     display: inline-block;
     font-family: 'Roboto', sans-serif;
@@ -104,11 +105,11 @@ h1, h2, h3, ul, li, p{
     letter-spacing: 2%;
 
     color: var(--title-text-color);
-    
-
+    transition: color 250ms (0.4, 0, 0.2, 1);
 }
-.current{
-    color: #404BBF;
+
+.current {
+    color: #9747FF;
 }
 .current::after {
     content: '';
