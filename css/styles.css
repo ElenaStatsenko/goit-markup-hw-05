@@ -546,7 +546,7 @@ margin-bottom: 72px;
     left: 50%;
     transform: translate(-50%,-50%);
     display: flex;
-    justify-content: end;
+    flex-direction: column;
     min-width: 408px;
     min-height: 576px;
     padding:  15px;
@@ -581,6 +581,34 @@ margin-bottom: 72px;
 .action:hover .backdrop-icon,
 .action:focus .backdrop-icon{
     fill: #FFFFFF;
+}
+.form{
+    display: inline-block;
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+    
+}
+.form-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
+.form-field {
+    gap: 8px;
+}
+.label {
+    display: block;
+    width: 100%;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 1.33;
+   letter-spacing: 0.04em;
+    color:#8E8F99;
+
 }
 
 
