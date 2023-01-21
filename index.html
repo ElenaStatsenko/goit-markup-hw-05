@@ -355,6 +355,19 @@
             </li>
         </ul>   
     </div>
+    <div class="email-input">
+        <p class="social-title">Subscribe</p>
+        <div class="subscribe">
+            <label class="section-form-label">
+                    <input type="name" class="form-input" name="name" placeholder="E-mail">
+            </label>
+            <button type="submit" class="button-primary footer-button">Subscribe
+                <svg class="footer-picture" width="24px" height="24px">
+                    <use href="./images/symbol-defs.svg#icon-pointer"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>
 <!-- модальное окно -->
 
@@ -370,29 +383,49 @@
             <div class="form-field">
                 <label class="form-label">
                     Name
-                <input type="name" class="form-input" name="name" placeholder="IVAN IVANOV">
+                    <div class="svg-position">
+                        <svg class="form-input-pictures" width="18px" height="18px">
+                            <use href="./images/symbol-defs.svg#icon-person"></use>
+                        </svg>
+                        <input type="name" class="form-input" name="name" placeholder=" ">
+                    </div>
                 </label>
             </div>
             <div class="form-field">
                 <label class="form-label">
                     Phone
-                    <input type="phone" class="form-input" name="phone" placeholder="0671633600">
+                    <div class="svg-position">
+                        <svg class="form-input-pictures" width="18px" height="18px">
+                            <use href="./images/symbol-defs.svg#icon-phone"></use>
+                        </svg>
+                        <input type="phone" class="form-input" name="phone" placeholder=" ">
+                    </div>
                 </label>
             </div>
             <div class="form-field">
                 <label class="form-label">
                     Email
-                    <input type="email" class="form-input" name="email" placeholder="@gmail.com">
+                    <div class="svg-position">
+                        <svg class="form-input-pictures" width="18px" height="18px">
+                            <use href="./images/symbol-defs.svg#icon-email"></use>
+                        </svg>
+                        <input type="email" class="form-input" name="email" placeholder=" ">
+                    </div>
                 </label>
             </div> 
             <div class="form-field">
-                <p class.textarea-title>Comment</p>
-                <textarea name="Comment" rows="5" placeholder="Text input">input text</textarea>
+                <p class="textarea-title">Comment</p>
+                <div class="textarea-block">
+                <textarea name="Comment" class="textarea-title-small" rows="5" placeholder="Text input">Text input</textarea>
+                </div>
             </div>
             <div class="checkbox-form">
                 <label class="checkbox-label">
-                    <input type="checkbox" class="form-input" name="policy" value="I accept the terms and conditions of the Privacy Policy">
+                    <input type="checkbox" class="checkbox-input" name="policy" value="I accept the terms and conditions of the Privacy Policy">
                 I accept the terms and conditions of the <a href="">Privacy Policy</a>
+                <svg class="checkbox-input-pictures" width="16px" height="16px">
+                    <use href="./images/symbol-defs.svg#icon-Checkbox"></use>
+                </svg>
                 </label>
             </div>
             <button type="submit" class="button-primary">Send</button>
