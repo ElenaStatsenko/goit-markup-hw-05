@@ -10,7 +10,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
-    background-color: var(--primary-bg-color);
+    background-color: var(-secondary-bg-color);
 }
 
 .container{
@@ -189,35 +189,39 @@ h1, h2, h3, ul, li, p{
     margin-bottom: 48px;
     padding: 0;
 }
+.hero-button {
+    min-width: 169px;
+    min-height: 56px;
+}
  /* кнопки */
  .button {
     color: var(--secondary-bg-color);
     background-color: var(--accent-color);
-    padding: 0;
-    border: none;
-    cursor: pointer;
-}
-.button-primary{
-    color: var(--secondary-bg-color);
-    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.18;
-    letter-spacing: 0.4em;
-    padding: 16px 32px;
     border: none;
     border-radius: 4px;
+    padding: 16px 32px;
     text-align: center;
-    min-width: 170px;
-    cursor: pointer;  
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    /* font-weight: 600;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.4em; */
+    
+
+
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 }
-.button-primary:hover,
-.button-primary:focus{
+
+.button:hover,
+.button:focus{
   background-color: #404BBF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); 
 }
@@ -392,7 +396,7 @@ margin-bottom: 72px;
 
 /* customers */
 .customers-section {
-    background-color: var(--primary-bg-color);
+    background-color: var(-secondary-bg-color);
     padding-top: 130px;
     padding-bottom: 120px;
 }
@@ -540,8 +544,24 @@ margin-bottom: 72px;
     display: flex;
     gap: 24px;
 }
+.form-input-footer {
+    display: block;
+    min-width: 264px;
+    min-height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    drop-shadow:(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+.form-input-footer:focus {
+    outline: none;
+}
 .footer-button {
     display: flex;
+    gap: 16px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    
 }
 /* модальное окно */
 .backdrop {
@@ -590,7 +610,7 @@ margin-bottom: 72px;
 }
 .action:hover, 
 .action:focus{
-    background-color: #404BBF;
+    background-color: #404BB;
   
 }
 .action:hover .backdrop-icon,
@@ -637,23 +657,9 @@ margin-bottom: 72px;
    
    /* width: 100%; */
 }
-.checkbox-label {
-    margin-bottom: 8px;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-     color:#8E8F99;
-}
-.button-primary {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.checkbox-form {
-    margin-top: 16px;
-    margin-bottom: 24px;
-}
+
+
+
 .svg-position {
     position: relative;
     display: block;
@@ -720,39 +726,59 @@ margin-bottom: 72px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
+    background: #FCFCFC;
     border: none;
 }
 .textarea-title-small:focus{
     outline: none;
 }
+
+.checkbox-field {
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    outline: 1px solid transparent;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color:#8E8F99;
+}
 .checkbox-input{
-    appearence:none;
     position: absolute;
-    /* -webkit-appearence:none;
-    -moz-appearence:none;
-    appearence:none; */
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;  
     
+}
+.checkbox-input-pictures{
+    margin-right: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);      
 }
 .checkbox-input:checked + .checkbox-input-pictures {
-    fill: #4D5AE5;
+    fill: #FFFFFF;
+    background-color: #4D5AE5;
 }
-/* .email-input{
+.modal-button {
     display: block;
-    
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 169px;
+    min-height: 56px;
+
 }
-.subscribe{
-    display: flex;
-    gap: 24px;
-} */
-/* .checkbox-input:checked .checkbox-input-pictures{
-    fill: 4D5AE5;
-} */
 /* PORTFOLIO */
 .portfolio {
     padding-top: 96px;
-    padding-bottom: 72px;
-
-    
+    padding-bottom: 72px;   
 }
 .button-portfolio {
     color: var(--accent-color);
@@ -841,10 +867,12 @@ img {
     margin-right: 24px;
 }
 .flex-card {
+    /* position: relative; */
     margin-bottom: 48px;
+
 }
 .thumb-card {
-    position: relative;
+    position: absolute;
    
 }
 .thumb-card:hover::before{
@@ -852,7 +880,7 @@ img {
     opacity: 1;
 }
 .thumb-card:hover .thumb-text{
-    transform: translateX(0%);
+    transform: translateX(100%);
     opacity: 1;
 }
 
