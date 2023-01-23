@@ -131,8 +131,7 @@ h1, h2, h3, ul, li, p{
 .site-nav .link:hover,
 .site-nav .link:focus { 
     color:var(--accent-color);
-=======
->>>>>>> e23bcdf69f4892e9cfb477103b73ac586813b11a
+
 }
 
 .auth-nav {
@@ -621,7 +620,7 @@ margin-bottom: 72px;
 }
 .action:hover, 
 .action:focus{
-    background-color: #404BB;
+    background-color: #404BBF;
   
 }
 .action:hover .backdrop-icon,
