@@ -118,7 +118,7 @@ h1, h2, h3, ul, li, p{
     background-color: #404BBF;
     opacity: 0;
 }
-.site-nav .link:hover::after{
+:current(.site-nav .link::after ){
     opacity: 1;
 }
 .site-nav .link:hover,
